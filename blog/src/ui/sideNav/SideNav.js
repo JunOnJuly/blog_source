@@ -1,57 +1,45 @@
 import * as s from './SideNavCss'
 import { useState } from 'react'
+import profile_image from '../../images/profile_image.png'
 
-function Udemy(props) {
-    return(
-        <s.SideNavMenuContextDiv>
+export default function SideNav(props) {
+    const [open, setOpen] = useState('Intro')
 
-            <s.SideNavMenuContext
-            onClick={() => props.setContext(20230911)}>
-                2023.09.11 (수업)
-            </s.SideNavMenuContext>
-
-        </s.SideNavMenuContextDiv>
-    )
-}
-
-
-export default function SideNav() {
-    const [open, setOpen] = useState(false)
-    const [context, setContext] = useState('main')
-
-    const sendSetContext = (e) => {
-        setContext(e)
+    const setMain = () => {
+        setOpen('Intro')
+        props.setPage('Intro')
     }
 
     const setUdemy = () => {
-        if (open === 'Udemy'){
-            setOpen(false)
-        } else {
-            setOpen('Udemy')
-        }
+        setOpen('Udemy')
+        props.setPage('Udemy')
     }
 
     return (
       <s.SideNavBackgroundDiv>
 
         <s.SideNavProfile>
-            <s.SideNavBorderDiv />
+            <s.SideNavProfileImage
+            src={profile_image} />
+
+            <s.SideNavProfileText
+            onClick={() => setMain()}
+            open={open}
+            name='Intro'>
+                JunOnJuly
+            </s.SideNavProfileText>
+
         </s.SideNavProfile>
+
+        <s.SideNavBorderDiv />
 
         <s.SideNavMenuDiv>
             <s.SideNavMenuTitle
-            onClick={() => setUdemy()}>
+            onClick={() => setUdemy()}
+            open={open}
+            name='Udemy'>
                 Udemy_UnityCamp
             </s.SideNavMenuTitle>
-            {
-                open === 'Udemy'
-                ? <Udemy setContext={sendSetContext}/>
-                : null
-            }
-            <s.SideNavMenuTitle>
-                Something
-            </s.SideNavMenuTitle>
-
         </s.SideNavMenuDiv>
       </s.SideNavBackgroundDiv>
     );
