@@ -1,12 +1,9 @@
 import * as s from './Main_css'
 
-function Main() {
+export default function Main() {
     return (
-      <s.MainBackgroundDiv className="App">
-        <p>hi</p>
+      <s.MainBackgroundDiv>
+
       </s.MainBackgroundDiv>
     );
   }
-  
-  export default Main;
-  

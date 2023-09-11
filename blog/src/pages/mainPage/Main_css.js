@@ -12,5 +12,5 @@ export const MainBackgroundDiv = styled.div`
     height: 100vh;
     width: 80vw;
 
-    background-color: ${c.Colors.main_blue};
+    background-color: ${c.Colors.main_pink};
 `
