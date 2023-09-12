@@ -131,7 +131,7 @@ export default function Main() {
       {
         {
           Intro: <Intro />,
-          Udemy: <Post />
+          Udemy: <Post page={'Udemy'} />
         }[page]
       }
     </s.MainBackgroundDiv>

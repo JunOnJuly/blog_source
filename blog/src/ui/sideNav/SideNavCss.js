@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const SideNavBackgroundDiv = styled.div`
-    position: absolute;
-    left: -20vw;
+    position: fixed;
+    left: 0vw;
     top: 0;
 
     display: flex;

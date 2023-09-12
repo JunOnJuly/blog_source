@@ -14,6 +14,13 @@ export const MainBackgroundDiv = styled.div`
     width: 80vw;
 
     background-color: white;
+
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+    display: none;
+    }
 `
 
 export const MainTextDiv = styled.div`
