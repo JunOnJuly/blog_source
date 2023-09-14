@@ -1,5 +1,9 @@
 import * as s from './Post_css'
+
 import preview20230911 from '../../images/20230911_preview.png'
+import preview20230913 from '../../images/20230913_preview.png'
+import preview20230914 from '../../images/20230914_preview.png'
+
 import email from '../../images/post_top_email.png'
 import kakao from '../../images/post_top_kakao.png'
 import phone from '../../images/post_top_cell.png'
@@ -34,6 +38,52 @@ const PostMesh = (props) => {
                     </s.PostPreviewContent>
                     <s.PostPreviewContent>
                         오브젝트 실습
+                    </s.PostPreviewContent>
+                </s.PostPreviewContentDiv>
+
+            </s.PostPreviewDiv>
+
+            <s.PostPreviewDiv
+            onClick={() => props.setPost('20230911')}>
+                <s.PostPreviewImg
+                src={preview20230911} />
+                <s.PostPreviewTitle>
+                    2023 / 09 / 13 - 자습
+                </s.PostPreviewTitle>
+                <s.PostPreviewContentDiv>
+                    <s.PostPreviewContent>
+                        GameObject 가지고 놀아보기
+                    </s.PostPreviewContent>
+                </s.PostPreviewContentDiv>
+            </s.PostPreviewDiv>
+
+            <s.PostPreviewDiv
+            onClick={() => props.setPost('20230911')}>
+                <s.PostPreviewImg
+                src={preview20230913} />
+                <s.PostPreviewTitle>
+                    2023 / 09 / 13 - 온라인 수업
+                </s.PostPreviewTitle>
+
+                <s.PostPreviewContentDiv>
+                    <s.PostPreviewContent>
+                        미니게임 만들기
+                    </s.PostPreviewContent>
+                </s.PostPreviewContentDiv>
+
+            </s.PostPreviewDiv>
+
+            <s.PostPreviewDiv
+            onClick={() => props.setPost('20230911')}>
+                <s.PostPreviewImg
+                src={preview20230914} />
+                <s.PostPreviewTitle>
+                    2023 / 09 / 14 - 자습 / 과제
+                </s.PostPreviewTitle>
+
+                <s.PostPreviewContentDiv>
+                    <s.PostPreviewContent>
+                        게임에 원하는 요소 넣어보기
                     </s.PostPreviewContent>
                 </s.PostPreviewContentDiv>
 
