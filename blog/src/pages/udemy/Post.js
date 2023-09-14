@@ -1,6 +1,7 @@
 import * as s from './Post_css'
 
 import preview20230911 from '../../images/20230911_preview.png'
+import preview20230912 from '../../images/20230912_preview.png'
 import preview20230913 from '../../images/20230913_preview.png'
 import preview20230914 from '../../images/20230914_preview.png'
 
@@ -9,6 +10,7 @@ import kakao from '../../images/post_top_kakao.png'
 import phone from '../../images/post_top_cell.png'
 
 import Post20230911 from './post/20230911/20230911'
+import Post20230912 from './post/20230912/20230912'
 
 import { useState } from 'react'
 
@@ -44,11 +46,11 @@ const PostMesh = (props) => {
             </s.PostPreviewDiv>
 
             <s.PostPreviewDiv
-            onClick={() => props.setPost('20230911')}>
+            onClick={() => props.setPost('20230912')}>
                 <s.PostPreviewImg
-                src={preview20230911} />
+                src={preview20230912} />
                 <s.PostPreviewTitle>
-                    2023 / 09 / 13 - 자습
+                    2023 / 09 / 12 - 자습
                 </s.PostPreviewTitle>
                 <s.PostPreviewContentDiv>
                     <s.PostPreviewContent>
@@ -138,7 +140,8 @@ export default function Post(props) {
             {
                 {
                     false: <PostMesh setPost={sendSetPost}/>,
-                    '20230911': <Post20230911 />
+                    '20230911': <Post20230911 />,
+                    '20230912': <Post20230912 />
                 }[post]
             }
 
