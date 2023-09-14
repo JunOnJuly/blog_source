@@ -4,8 +4,6 @@ import { useState } from 'react'
 import image1 from '../../../../images/20230912_image1.png'
 
 export default function Post20230911(props) {
-    const [engine, setEngine] = useState(false)
-    const [unity, setUnity] = useState(false)
     const [object, setObject] = useState(false)
     const [review, setReview] = useState(false)
 
