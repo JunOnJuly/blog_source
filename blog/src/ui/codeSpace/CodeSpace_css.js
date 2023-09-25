@@ -14,7 +14,7 @@ export const CodeSpaceText = styled.p`
     color: ${props => props.color};
     font-weight: ${props => props.weight};
     font-size: ${props => props.size};
-    margin: 0 1vw 0 0;
+    margin: 0 .5vw 0 0;
 
     font-family: 'Oswald';
     cursor:default;
@@ -24,4 +24,9 @@ export const CodeSpaceText = styled.p`
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+`
+
+export const CodeSpaceOneLine = styled.div`
+    display: flex;
+    flex-direction: row;
 `
