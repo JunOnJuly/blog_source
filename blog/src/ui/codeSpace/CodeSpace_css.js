@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
 export const CodeSpaceBackgroundDiv = styled.div`
-    position: absolute;
-    left: 0;
-    top: 0;
+    height: auto;
+    width: 60vw;
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: beige;
+    padding: 3vh;
 `
 
 export const CodeSpaceText = styled.p`
     color: ${props => props.color};
     font-weight: ${props => props.weight};
     font-size: ${props => props.size};
+    margin: 0 1vw 0 0;
 
     font-family: 'Oswald';
     cursor:default;
